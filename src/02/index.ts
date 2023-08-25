@@ -1,6 +1,8 @@
-export default function HelloWorld (name: string){
-    if (name){
-        return `Hello, ${name}`
+export default function HelloWorld (name: string, language: string){
+    let defaultLanguage = "Hello"
+    if (language == "French"){defaultLanguage = "Salut"}
+    if(name){
+        return `${defaultLanguage}, ${name}`
     }
-    return "Hello World"
+    return `${defaultLanguage} World`
 }
